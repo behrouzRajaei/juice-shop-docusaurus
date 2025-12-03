@@ -1,7 +1,8 @@
-# Juice Shop Master
+# README - Juice Shop Master
 
-This project contains my completed hacking challenges from the OWASP Juice Shop application.
-The content of this repository is provided solely for educational and ethical security research purposes.
+This project contains documented solutions to selected OWASP Juice Shop security challenges.
+It was created as part of a DevSecOps training program and is intended strictly for educational
+and ethical learning purposes only. All demonstrations are performed in a controlled environment.
 
 ---
 
@@ -10,7 +11,8 @@ The content of this repository is provided solely for educational and ethical se
 - [Quickstart](#quickstart)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
-- [Challenges Documentation & Videos](#challenges-documentation--videos)
+- [Challenges](#challenges)
+- [Checklist](./CHECKLIST.md)
 - [Security Notice](#security-notice)
 - [Contributing](#contributing)
 - [License](#license)
@@ -34,20 +36,20 @@ Each challenge includes a written report, related materials, and a demonstration
 
 ### 1. Install Dependencies
 ```bash
-cd juice-shop
+cd docs-site
 npm install
 ```
 
-### 4. Start the Application
+### 2. Start the Application
 ```bash
 npm start
 ```
 
-### 5. Visit
+### 3. Visit
 
 Now visit the application at:
 ```
-http://localhost:3000
+http://localhost:3001
 ```
 
 ## Prerequisites
@@ -64,45 +66,34 @@ Before running the project, ensure you have:
 
 ## Usage
 
-1. Run Juice Shop locally.
+1. Start the Docusaurus documentation server.
 
-2. Attempt the security challenges.
+2. Navigate to **Juice Shop Master** in the sidebar.
 
-3. Use browser developer tools or ethical hacking utilities.
+3. Select a challenge (XSS, CAPTCH or Admin).
 
-4. Document each challenge in its corresponding folder.
+4. Follow the documented steps and watch the attached video.
 
-## Challenges Documentation & videos
-
-Below are the three selected challenges for the Juice Shop Master project.
-
-All explanations and technical steps reflect the actual methods used during exploitation using Burp Suite.
-
-Each challenge includes:
-
-- A description of the vulnerability
-
-- The exact method used (based on Burp Suite workflow)
-
-- The exploitation steps
-
-- Security risks
-
-- Results
-
-- The demonstration video
+## Challenges
 
 ### 1. Client-side XSS Protection
 
-- [Client-side XSS Protection](../challenges/xss/index-xss.md)
+- [XSS Challenge](./challenges/xss/index.md)
 
 ### 2. CAPTCHA Bypass challenge
 
-- [CAPTCHA Bypass](../challenges/captcha/index-captcha.md)
+- [CAPTCHA Challenge](./challenges/captcha/index.md)
 
 ### 3. Admin Registration challenge
 
-- [Admin Registration](../challenges/admin/index-admin.md)
+- [Admin Challenge](./challenges/admin/index.md)
+
+## Checklist
+
+The official project checklist used for this submission has been added as a separate document.
+It confirms that all required steps, documentation, and videos have been completed according to the assignment guidelines.
+
+[View Checklist](./CHECKLIST.md)
 
 ## Security Notice
 
