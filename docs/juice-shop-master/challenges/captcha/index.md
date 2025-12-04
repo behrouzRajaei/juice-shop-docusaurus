@@ -1,17 +1,32 @@
 # CAPTCHA Bypass Challenge
 
-### 2. CAPTCHA Bypass challenge
+:::warning Educational Use Only
+This challenge is documented strictly for educational and ethical purposes within the OWASP Juice Shop training environment only.
 
-#### Category:
+Do NOT attempt this on real systems.
+:::
+
+## Description
+
+The OWASP Juice Shop uses a CAPTCHA system to prevent automated abuse of the feedback form.
+However, the CAPTCHA validation can be bypassed by intercepting and replaying the original request.
+
+This makes it possible to submit feedback multiple times without solving the CAPTCHA again.
+
+## Category
 
 Input Validation / Bot Prevention Failure
 
-#### Description
+## Prerequisites
 
-The CAPTCHA mechanism in Juice Shop does not validate the CAPTCHA value on the server.
-This makes it possible to submit feedback repeatedly without solving the CAPTCHA, simply by replaying the request.
+To reproduce this challenge, the following tools and setup are required:
 
-#### Exploitation Steps
+- Running OWASP Juice Shop (local)
+- Burp Suite (Community or Professional)
+- Web browser (e.g. Chrome / Firefox)
+- Basic understanding of HTTP requests
+
+## Exploitation Steps
 
 1. Log out and go to the Customer Feedback section.
 
@@ -29,7 +44,7 @@ This makes it possible to submit feedback repeatedly without solving the CAPTCHA
 
 8. Each repeated request is accepted successfully despite not solving the CAPTCHA image again.
 
-#### Risks & Impact
+## Risks & Impact
 
 - Automated spam through mass feedback submissions
 
@@ -39,10 +54,26 @@ This makes it possible to submit feedback repeatedly without solving the CAPTCHA
 
 - Potential for automated large-scale attacks
 
-#### Result
+## Proof of Concept
 
-The challenge is solved once multiple feedback entries are submitted without ever solving the CAPTCHA again.
+The following screenshots confirm the successful CAPTCHA bypass:
+
+### Captured request in Burp Suite
+
+![Burp Request](../Pics/captcha1_1.png)
+![Burp Request](../Pics/captcha1_2.png)
+![Burp Request](../Pics/captcha1_3.png)
+![Burp Request](../Pics/captcha1_4.png)
+
+### Feedback submitted without solving CAPTCHA again
+
+![Bypass success](../Pics/captcha2.png)
 
 #### Challenge Video
 
 [CAPTCHA Bypass —  Video Link](https://www.loom.com/share/9cfd73dc034749449d7da6e9cf5f9f26)
+
+#### Result
+
+The challenge is solved once multiple feedback entries are submitted without ever solving the CAPTCHA again.
+

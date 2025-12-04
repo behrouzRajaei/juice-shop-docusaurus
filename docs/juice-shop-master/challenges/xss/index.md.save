@@ -8,13 +8,7 @@ Do NOT attempt this on real systems.
 
 :::
 
-## Description
-
 This challenge demonstrates how client-side input validation can be bypassed in the OWASP Juice Shop application. By intercepting and modifying the registration request, malicious input can be injected and executed in the browser.
-
-## Category:
-
-Cross-Site Scripting (XSS) / Client-Side Input Validation
 
 ## Prerequisites
 
@@ -25,7 +19,28 @@ To complete this challenge, the following requirements must be fulfilled:
 - Browser traffic is routed through Burp Suite
 - Basic understanding of HTTP requests and client-side validation
 
-## Exploitation Steps
+### 1. Client-side XSS Protection
+
+#### Category:
+
+Cross-Site Scripting (XSS) / Client-Side Input Validation
+
+## Prerequisites
+
+- OWASP Juice Shop running locally or on a VM
+- Web browser (Chrome or Firefox recommended)
+- Basic knowledge of web security concepts
+- Browser developer tools access (F12)
+
+## Step-by-Step Exploitation
+
+1. Open the Juice Shop application
+2. Navigate to...
+3. Enter the following payload:
+   ```html
+   <script>alert(1)</script>
+
+#### Exploitation Steps
 
 1. Register a new user inside Juice Shop but before clicking “Register,” turn on Intercept in Burp Suite.
 
@@ -47,7 +62,7 @@ To complete this challenge, the following requirements must be fulfilled:
 
 8. The browser processes the injected payload, triggering the XSS and solving the challenge.
 
-## Risks & Impact
+#### Risks & Impact
 
 - Execution of arbitrary JavaScript in a victim’s browser
 
@@ -59,21 +74,19 @@ To complete this challenge, the following requirements must be fulfilled:
 
 - Full compromise of user interaction inside the application
 
+#### Result
+
+The challenge is solved once the JavaScript alert executes successfully, proving that client-side protection was bypassed.
+
+#### Challenge Video
+
+[Client-side XSS Protection — Video Link](https://www.loom.com/share/53404102561e450685a398f69a681a15)
 ## Proof of Concept
 
 The following screenshots confirm successful completion of the Client-side XSS Protection challenge.
 
 ### XSS Payload injected
-![XSS Payload](../Pics/xss1_1.png)
-![XSS Payload](../Pics/xss1_2.png)
+![XSS Payload](./screenshots/xss-payload.png)
 
 ### JavaScript execution in browser
-![Alert triggered](../Pics/xss2.png)
-
-## Challenge Video
-
-[Client-side XSS Protection — Video Link](https://www.loom.com/share/53404102561e450685a398f69a681a15)
-
-## Result
-
-The challenge is solved once the JavaScript alert executes successfully, proving that client-side protection was bypassed.
+![Alert triggered](./screenshots/xss-alert.png)

@@ -1,8 +1,13 @@
 # README - Juice Shop Master
 
-This project contains documented solutions to selected OWASP Juice Shop security challenges.
-It was created as part of a DevSecOps training program and is intended strictly for educational
-and ethical learning purposes only. All demonstrations are performed in a controlled environment.
+:::warning Educational Use Only
+
+This project documents security vulnerabilities found in OWASP Juice Shop and is **strictly for educational and ethical purposes**.
+All activities were performed in a controlled environment on intentionally vulnerable applications.
+
+Do NOT attempt these techniques on real systems without explicit permission.
+
+:::
 
 ---
 
