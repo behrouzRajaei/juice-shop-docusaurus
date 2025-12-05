@@ -1,4 +1,4 @@
-# Checklist – Juice Shop (2024)
+# Checklist – Juice Shop Master
 
 ## Inhalt der Checkliste
 - Projektabgabe Juice Shop Hacking
