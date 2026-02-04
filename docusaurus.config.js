@@ -103,6 +103,13 @@ const config = {
             label: 'Juice Shop Master',
           },
           {
+            type: 'doc',
+            docId: 'minecraft-server/README',
+            position: 'left',
+            label: 'Minecraft Server',
+          },
+
+          {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',

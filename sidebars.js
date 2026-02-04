@@ -13,8 +13,15 @@ const sidebars = {
         'juice-shop-master/challenges/admin/index',
       ],
     },
+    {
+      type: 'category',
+      label: 'Minecraft Server',
+      items: [
+        'minecraft-server/README',
+        'minecraft-server/CHECKLIST',
+      ],
+    },
   ],
 };
 
 export default sidebars;
-

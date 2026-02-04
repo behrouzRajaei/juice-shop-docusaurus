@@ -12,7 +12,7 @@ Do NOT attempt this on real systems.
 
 This challenge demonstrates how client-side input validation can be bypassed in the OWASP Juice Shop application. By intercepting and modifying the registration request, malicious input can be injected and executed in the browser.
 
-## Category:
+## Category
 
 Cross-Site Scripting (XSS) / Client-Side Input Validation
 

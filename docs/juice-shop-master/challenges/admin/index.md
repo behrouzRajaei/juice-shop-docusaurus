@@ -13,7 +13,7 @@ Do NOT attempt this on real systems.
 Juice Shop exposes internal API functionality allowing the creation of admin users.
 When user creation requests are intercepted, an attacker can modify the payload and assign admin privileges to a new account.
 
-## Category:
+## Category
 
 Access Control / Account Privilege Escalation
 
